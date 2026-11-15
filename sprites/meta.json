@@ -1,0 +1,67 @@
+{
+ "palm": {
+  "w": 545,
+  "h": 1024,
+  "aspect": 0.5322
+ },
+ "whaleshark": {
+  "w": 1024,
+  "h": 330,
+  "aspect": 3.103
+ },
+ "fusilier": {
+  "w": 512,
+  "h": 157,
+  "aspect": 3.2611
+ },
+ "butterfly": {
+  "w": 384,
+  "h": 270,
+  "aspect": 1.4222
+ },
+ "damsel": {
+  "w": 384,
+  "h": 213,
+  "aspect": 1.8028
+ },
+ "figtree": {
+  "w": 768,
+  "h": 522,
+  "aspect": 1.4713
+ },
+ "seafan": {
+  "w": 373,
+  "h": 512,
+  "aspect": 0.7285
+ },
+ "softcoral": {
+  "w": 514,
+  "h": 512,
+  "aspect": 1.0039
+ },
+ "sponge": {
+  "w": 385,
+  "h": 512,
+  "aspect": 0.752
+ },
+ "staghorn": {
+  "w": 719,
+  "h": 512,
+  "aspect": 1.4043
+ },
+ "eagle": {
+  "w": 768,
+  "h": 381,
+  "aspect": 2.0157
+ },
+ "turtle": {
+  "w": 640,
+  "h": 372,
+  "aspect": 1.7204
+ },
+ "statue-left": {
+  "w": 760,
+  "h": 1009,
+  "aspect": 0.7532
+ }
+}

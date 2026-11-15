@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Netrani Island Packages &amp; Scuba Diving from Murudeshwar</title>
+  <meta name="description" content="Netrani Island packages, scuba diving, snorkelling and boat trips from Murudeshwar: the season, what you see underwater, prices and booking on WhatsApp." />
+  <link rel="canonical" href="https://netraniisland.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Netrani Island" />
+  <meta property="og:title" content="Netrani Island: scuba diving, snorkelling and boat trips from Murudeshwar" />
+  <meta property="og:description" content="Cross 19 km of open sea to the heart-shaped island and dive its reef: an interactive guide with booking on WhatsApp." />
+  <meta property="og:url" content="https://netraniisland.com/" />
+  <meta property="og:image" content="https://netraniisland.com/media/og/netrani-island.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" type="application/rss+xml" title="Netrani Island blog" href="/blog/rss.xml" />
+  <meta name="theme-color" content="#0b2530" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 56C14 44 6 34 6 22a13 13 0 0 1 26-4 13 13 0 0 1 26 4c0 12-8 22-26 34z' fill='%23c4512f'/%3E%3C/svg%3E" />
+  <script type="module" crossorigin src="/assets/main-BZJ-BnTE.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/leads-DwjXKWHj.js">
+  <link rel="stylesheet" crossorigin href="/assets/leads-C4w7zXRk.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-Bd6CTlcE.css">
+</head>
+<body>
+  <a class="skip" href="#field-guide">Skip the 3D journey</a>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="Netrani, back to the top">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path class="brand-heart" d="" /></svg>
+      <span>Netrani</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#top" data-jump="0.0">Island</a>
+      <a href="#top" data-jump="0.27">Heart</a>
+      <a href="#top" data-jump="0.47">Crossing</a>
+      <a href="#top" data-jump="0.7">Reef</a>
+      <a href="#top" data-jump="0.95">Cutaway</a>
+      <a href="#field-guide">Field guide</a>
+      <a href="#dive-lab">Dive lab</a>
+      <a href="#chronicle">Story</a>
+      <a href="#plan">Plan</a>
+      <a href="/blog/">Blog</a>
+      <a href="/pricing">Prices</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="sound" id="sound" type="button" aria-pressed="false" aria-label="Turn on the sound of the sea">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="sound-label">Sound</span>
+      </button>
+      <a class="cta" href="#dive">Plan a dive</a>
+      <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= THE JOURNEY (sticky 3D stage + beats) ================= -->
+    <section class="story" id="story" aria-label="A scroll journey around Netrani Island">
+      <div class="stage" id="stage">
+        <canvas id="gl" aria-hidden="true"></canvas>
+        <canvas id="chart" aria-hidden="true"></canvas>
+        <div class="labels" id="labels"></div>
+        <div class="hud" id="hud" aria-hidden="true">
+          <div class="gauge">
+            <div class="gauge-scale" id="gauge-scale"></div>
+            <div class="gauge-mark" id="gauge-mark"><b id="depth-read">0.0</b><span>m</span></div>
+          </div>
+          <div class="hud-panel">
+            <div class="hud-row hud-clock"><span>dive time</span><b id="hud-time">0 min</b></div>
+            <div class="hud-row"><span>cylinder</span><b id="hud-tank">200 bar</b></div>
+            <div class="hud-row"><span>pressure</span><b id="hud-bar">1.0 bar</b></div>
+            <div class="hud-row"><span>air in a lungful</span><b id="hud-vol">100%</b></div>
+            <div class="hud-light"><span>light left</span>
+              <div class="swatches" id="swatches"><i style="--c:#e23b2e"></i><i style="--c:#f08a24"></i><i style="--c:#f4d03f"></i><i style="--c:#4caf50"></i><i style="--c:#2f7fd8"></i></div>
+            </div>
+          </div>
+        </div>
+        <ol class="rail" id="rail" aria-label="Journey chapters">
+          <li><button type="button" data-jump="0.0"><span>Island</span></button></li>
+          <li><button type="button" data-jump="0.27"><span>Heart</span></button></li>
+          <li><button type="button" data-jump="0.47"><span>Crossing</span></button></li>
+          <li><button type="button" data-jump="0.7"><span>Reef</span></button></li>
+          <li><button type="button" data-jump="0.95"><span>Cutaway</span></button></li>
+        </ol>
+        <div class="vignette" aria-hidden="true"></div>
+        <div class="nogl" id="nogl" hidden>
+          <p>This journey draws Netrani live in 3D, and your browser hasn’t enabled WebGL. Everything below still works.</p>
+        </div>
+      </div>
+
+      <article class="beat beat-hero on-dark" style="--p:0">
+        <p class="eyebrow">Uttara Kannada · Arabian Sea · 14°01′N 74°20′E</p>
+        <h1 class="hero-title"><span>Netrani</span></h1>
+        <p class="lede">A heart-shaped island of rock and fig forest, nineteen kilometres off Murudeshwar, and the reef that lives around it.</p>
+        <form class="quick-book" id="quick-book" aria-label="Book on WhatsApp">
+          <label class="qb-what"><span>I would like</span>
+            <select name="activity">
+              <option>Scuba diving</option>
+              <option>Snorkelling</option>
+              <option>A boat trip to Netrani</option>
+              <option>A private boat</option>
+              <option>Water sports at Murudeshwar</option>
+            </select>
+          </label>
+          <label class="qb-msg"><span>Your message</span><input name="msg" placeholder="Date, number of people, any questions" autocomplete="off" /></label>
+          <button class="cta qb-send" type="submit">Send on WhatsApp</button>
+          <a class="qb-call" href="tel:+917829008264" data-cta="hero">or call +91 78290 08264</a>
+        </form>
+        <p class="scroll-cue"><span class="cue-line" aria-hidden="true"></span>Scroll to set out</p>
+      </article>
+
+      <article class="beat on-dark side-right" style="--p:0.085">
+        <p class="kicker">01 · The island</p>
+        <h2>From the shore, a shape on the horizon.</h2>
+        <p>On clear evenings you can pick Netrani out from Murudeshwar beach, a dark hump against the sunset. Up close it is steep rock rising straight out of the sea, with no beach and no jetty. A crown of fig forest sits on top, white water breaks all the way round, and nobody lives there.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.255">
+        <p class="kicker">02 · From above</p>
+        <h2>Look down, and it is a heart.</h2>
+        <p>The coastline being traced is the real one, from OpenStreetMap. Two lobes face north with a notch between them, narrowing to a point in the south.</p>
+        <dl class="facts">
+          <div><dt>north–south</dt><dd>≈ 700 m</dd></div>
+          <div><dt>east–west</dt><dd>≈ 630 m</dd></div>
+          <div><dt>coastline</dt><dd>≈ 2.3 km</dd></div>
+          <div><dt>area</dt><dd>≈ 0.3 km²</dd></div>
+          <div><dt>summit</dt><dd>≈ 75 m</dd></div>
+          <div><dt>sea around</dt><dd>6–40 m</dd></div>
+        </dl>
+        <p class="note">Outline from OpenStreetMap; figures from the NCSCM island database and field surveys. Relief and seabed are modelled, with heights stretched ×1.8 so you can read them.</p>
+      </article>
+
+      <article class="beat on-paper side-left" style="--p:0.398">
+        <p class="kicker">03 · The crossing</p>
+        <h2>Nineteen kilometres of open sea.</h2>
+        <p>Netrani lies about 19 km (10 nautical miles) west-southwest of Murudeshwar’s temple. Every trip starts on the mainland, on the beach beside the temple headland.</p>
+        <p class="note">Keep scrolling to make the crossing.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.452">
+        <p class="kicker">Leaving Murudeshwar</p>
+        <h2>Early boats, and a giant watching them go.</h2>
+        <p>Dive boats leave from the beach in the early morning, when the sea is calmest. Behind you on Kanduka hill sits the 123-ft (37 m) Shiva statue, facing the Raja Gopura, a 20-storey temple tower about 249 ft (76 m) tall, with the sea at its back.</p>
+        <p class="note">The headland is laid out from OpenStreetMap footprints; buildings and statues are simplified.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.492">
+        <p class="kicker">Open water</p>
+        <h2>Forty-five minutes to an hour and a half.</h2>
+        <p>It depends on the boat and the sea. The mainland sinks into the haze behind you, and on a clear day Netrani shows up as a dark shape on the horizon long before you can make out its cliffs. The map in the corner tracks the boat.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.532">
+        <p class="kicker">Arrival</p>
+        <h2>The boat stops off the reef, never at the island.</h2>
+        <p>There is no jetty and no beach. Tourists don’t land: the crew drops anchor over the reef, and the dive begins from here.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.568">
+        <p class="kicker">Getting in</p>
+        <h2>Backwards over the side.</h2>
+        <p>Kitted up, divers sit on the edge of the boat with their backs to the sea. One palm holds the mask and regulator in place, the other hand holds the mask strap behind the head, and they roll backwards, cylinder first. The guide goes in first and waits for the others.</p>
+        <p class="note">At the surface they inflate their jackets and signal “OK” with a hand on top of the head, big enough for the boat to see.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.612">
+        <p class="kicker">Descent</p>
+        <h2>Down the line, ears first.</h2>
+        <p>Divers let the air out of their jackets and sink slowly, feet first, a hand on the anchor line to control the speed. Every half metre or so they pinch their nose and blow gently to equalise their ears, before it hurts, not after. The line leads straight down to the reef.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.655">
+        <p class="kicker">04 · Beneath the surface</p>
+        <h2>Below the surf line, the island keeps going.</h2>
+        <p>The rock carries on underwater: boulders, then reef crusted with coral, then sand, down to about 40 m. When scientists first surveyed it in May 2006 they counted 14 kinds of coral and 92 kinds of fish. The gauge shows your depth; watch the pressure climb and the colours drain.</p>
+        <p class="note">This team are certified divers, down to about 16 m here. Try dives stay shallower, above 12 m.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.69">
+        <p class="kicker">Bottom time</p>
+        <h2>Forty minutes, not forty seconds.</h2>
+        <p>A dive here lasts 30 minutes to an hour, set by the air in the cylinder and the time limits for the depth. The dive computer in the corner keeps real time while you scroll: watch the minutes add up and the cylinder drain from 200 bar. The guide turns the group back with plenty of air to spare.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.72">
+        <p class="kicker">05 · Light</p>
+        <h2>Red goes first.</h2>
+        <p>Water absorbs long wavelengths fastest. A few metres down, reds turn brown. By about ten metres, orange fades too, and the world turns blue-green. Watch the guide’s torch: its light has only a short way to travel, so in its beam the reef’s reds and oranges come back. The colour was there all along.</p>
+        <p class="note"><span class="hint-fine">Sweep your cursor through a shoal and watch it scatter.</span><span class="hint-touch">Tap the water to scatter a shoal.</span> Every diver’s bubbles swell as they rise: less pressure, more volume.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.775" data-fact="whaleshark">
+        <p class="kicker">Out in the blue</p>
+        <h2>Sometimes, something enormous passes.</h2>
+        <p>On 10 May 2006, scientists surveying the reef logged a juvenile whale shark, the largest fish in the sea. Whale sharks are harmless plankton-feeders, and no trip can promise one.</p>
+      </article>
+
+      <article class="beat on-dark side-left" style="--p:0.81">
+        <p class="kicker">Ascent</p>
+        <h2>Up slowly, and a pause at five metres.</h2>
+        <p>The group comes back up the line slowly, about 9 m a minute. At 5 m they hang for three minutes, a safety stop that gives the body time to shed nitrogen taken up at depth. Then the boat, the sun, and the long ride home.</p>
+      </article>
+
+      <article class="beat on-paper side-right" style="--p:0.86">
+        <p class="kicker">06 · The cutaway</p>
+        <h2>Now lift the sea away.</h2>
+        <p>Here is the whole place as one block: the island, the reef, and the water column, sliced open like a sample on a lab bench.</p>
+      </article>
+
+    </section>
+
+    <aside class="fieldnote" id="fieldnote" hidden aria-live="polite">
+      <button class="fieldnote-close" type="button" aria-label="Close note">×</button>
+      <p class="fieldnote-kicker"></p>
+      <h3></h3>
+      <p class="fieldnote-body"></p>
+      <p class="fieldnote-hand"></p>
+    </aside>
+
+    <!-- ================= FIELD GUIDE ================= -->
+    <section class="section paper" id="field-guide">
+      <div class="head-grid">
+        <header class="section-head">
+          <p class="kicker">Field guide</p>
+          <h2>Who you might meet.</h2>
+          <p class="section-lede">Reef regulars, lucky-day visitors and the island’s namesakes. Netrani is a living reef, not an aquarium, so sightings are never scheduled.</p>
+        </header>
+        <aside class="ladder" id="ladder" aria-label="Where each animal lives, from the treetops to the reef crevices"></aside>
+      </div>
+      <div class="chips" role="tablist" aria-label="Filter species">
+        <button role="tab" aria-selected="true" data-filter="all">Everything</button>
+        <button role="tab" aria-selected="false" data-filter="reef">Reef regulars</button>
+        <button role="tab" aria-selected="false" data-filter="lucky">Lucky days</button>
+        <button role="tab" aria-selected="false" data-filter="above">Above water</button>
+      </div>
+      <div class="species" id="species"></div>
+      <dialog class="species-dialog" id="species-dialog">
+        <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+        <div class="species-dialog-body"></div>
+      </dialog>
+    </section>
+
+    <!-- ================= DIVE LAB ================= -->
+    <section class="section deep" id="dive-lab">
+      <div class="head-grid">
+        <header class="section-head">
+          <p class="kicker">Dive lab</p>
+          <h2>Why ears pop and reds vanish.</h2>
+          <p class="section-lede">Drag the diver down the water column. Everything here is computed live from two rules: seawater adds about one bar of pressure for every ten metres, and it absorbs red light first.</p>
+        </header>
+        <aside class="rules2" aria-label="The two rules">
+          <div class="rule2"><span class="rule2-n">1</span><div><b>+1 bar every 10 m</b><div class="bars" aria-hidden="true"><i style="--h:25%"></i><i style="--h:50%"></i><i style="--h:75%"></i><i style="--h:100%"></i></div><small>0 · 10 · 20 · 30 m</small></div></div>
+          <div class="rule2"><span class="rule2-n">2</span><div><b>Red goes first</b><div class="spec2" aria-hidden="true"><i style="--c:#e5412f;--d:0.2"></i><i style="--c:#f08a24;--d:0.45"></i><i style="--c:#f2cf3a;--d:0.7"></i><i style="--c:#4cb35a;--d:0.85"></i><i style="--c:#2f7fd8;--d:1"></i></div><small>what survives with depth</small></div></div>
+        </aside>
+      </div>
+      <div class="lab">
+        <figure class="lab-visual">
+          <canvas id="lab-canvas" role="img" aria-label="An illustrated water column from the surface to 30 metres. A diver hangs at the chosen depth beside a reef wall that carries the same red sea fan at four depths. Bubbles grow as they rise."></canvas>
+          <button class="torch" id="lab-torch" type="button" aria-pressed="false"><span class="torch-dot" aria-hidden="true"></span>Torch</button>
+          <figcaption class="lab-cap">drag the diver up and down</figcaption>
+        </figure>
+        <div class="lab-side">
+          <label class="lab-slider">
+            <span>Depth</span>
+            <input type="range" id="lab-depth" min="0" max="30" step="0.5" value="0" />
+            <output id="lab-depth-out">0 m</output>
+          </label>
+          <div class="instruments">
+            <figure class="inst">
+              <svg id="inst-gauge" viewBox="0 0 120 120" aria-hidden="true"></svg>
+              <figcaption><b id="lab-bar">1.0 bar</b><span>pressure on you</span></figcaption>
+            </figure>
+            <figure class="inst">
+              <svg id="inst-breath" viewBox="0 0 120 120" aria-hidden="true"></svg>
+              <figcaption><b id="lab-vol">100%</b><span>size of a surface breath</span></figcaption>
+            </figure>
+            <figure class="inst">
+              <svg id="inst-tank" viewBox="0 0 120 120" aria-hidden="true"></svg>
+              <figcaption><b id="lab-tank">60 min</b><span>a “60-minute” tank lasts</span></figcaption>
+            </figure>
+          </div>
+          <div class="spectrum">
+            <p class="spectrum-label">Light left after <b id="spec-path">2 m</b> of water</p>
+            <div class="spec-bars" id="spec-bars"></div>
+          </div>
+          <p class="lab-insight" id="lab-insight"></p>
+          <p class="fine lab-fine">Illustration, not dive training. Attenuation uses typical coefficients for clear coastal water; breathing rate is held constant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHRONICLE ================= -->
+    <section class="section paper" id="chronicle">
+      <header class="section-head">
+        <p class="kicker">The story so far</p>
+        <h2>A target, a refuge, a reef.</h2>
+        <p class="section-lede" id="chronicle-lede">What is documented about Netrani, in order. Mainland legend is kept separate from island history.</p>
+      </header>
+      <div class="chron">
+        <ol class="timeline" id="timeline"></ol>
+        <figure class="chron-map" id="chron-map" aria-label="Map of Netrani that highlights what each event is about">
+          <svg id="chron-svg" viewBox="-1400 -1400 2800 2800" role="img"></svg>
+          <figcaption id="chron-cap"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= PLAN ================= -->
+    <section class="section paper-2" id="plan">
+      <div class="head-grid">
+        <header class="section-head">
+          <p class="kicker">Plan</p>
+          <h2>When the sea says yes.</h2>
+          <p class="section-lede">Netrani is ruled by the monsoon. Turn the wheel to see how a year at sea usually looks.</p>
+        </header>
+        <aside class="now-card" id="now-card" aria-live="polite"></aside>
+      </div>
+      <div class="season">
+        <div class="wheel-wrap">
+          <svg class="wheel" id="wheel" viewBox="-200 -200 400 400" role="group" aria-label="Season wheel, choose a month"></svg>
+        </div>
+        <div class="season-detail" id="season-detail" aria-live="polite"></div>
+      </div>
+      <div class="day" id="day">
+        <h3>A typical day on the water</h3>
+        <ol class="day-line" id="day-line"></ol>
+      </div>
+      <div class="getting" id="getting"></div>
+    </section>
+
+    <!-- ================= DIVE WITH US (booking) ================= -->
+    <section class="section deep" id="dive">
+      <div class="head-grid">
+        <header class="section-head">
+          <p class="kicker">Go</p>
+          <h2>Pick your way in.</h2>
+          <p class="section-lede">From a first breath underwater with an instructor to a full certification course. Choose one, fill in the details, and we’ll prepare a message you can review before sending.</p>
+        </header>
+        <ol class="steps" aria-label="How booking works">
+          <li><b>Choose</b><span>Pick an experience and a date, then send the prepared message on WhatsApp.</span></li>
+          <li><b>Hear back</b><span>The dive team replies with availability, what’s included, eligibility and the price.</span></li>
+          <li><b>Confirm</b><span>You confirm directly with them. Nothing is booked until you do.</span></li>
+        </ol>
+      </div>
+      <div class="experiences" id="experiences" role="radiogroup" aria-label="Choose an experience"></div>
+      <form class="enquiry" id="enquiry" novalidate>
+        <div class="enquiry-fields">
+          <label><span>Your name</span><input name="name" autocomplete="name" required /></label>
+          <label><span>Phone (with country code)</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required /></label>
+          <label><span>Preferred date</span><input name="date" type="date" /></label>
+          <label><span>People</span>
+            <div class="stepper"><button type="button" data-step="-1" aria-label="Fewer people">−</button><input name="people" type="number" min="1" max="30" value="2" /><button type="button" data-step="1" aria-label="More people">+</button></div>
+          </label>
+          <label class="wide"><span>Anything we should know? (swimming comfort, medical notes, questions)</span><textarea name="notes" rows="3"></textarea></label>
+        </div>
+        <div class="enquiry-preview">
+          <p class="preview-label">Your message</p>
+          <pre id="preview" aria-live="polite"></pre>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <div class="enquiry-actions">
+            <button type="submit" class="cta big" id="send">Open in WhatsApp</button>
+            <button type="button" class="ghost" id="copy">Copy message</button>
+          </div>
+          <p class="fine">Nothing is sent until you press send in WhatsApp. Dates, availability and prices are confirmed by the dive team, never by this page.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ================= ETIQUETTE + FAQ ================= -->
+    <section class="section paper" id="faq">
+      <div class="etiquette">
+        <header class="section-head">
+          <p class="kicker">Reef manners</p>
+          <h2>Leave it as you found it.</h2>
+        </header>
+        <ul class="rules" id="rules"></ul>
+      </div>
+      <div class="faq">
+        <h2>Questions people ask</h2>
+        <div id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Netrani</p>
+        <p class="fine">An interactive guide to Netrani Island, Murudeshwar, Karnataka. Drawn live with three.js and Canvas 2D, dressed with AI-generated photoreal textures. The coastline is real (OpenStreetMap); the relief, seabed and landmarks are illustrative.</p>
+      </div>
+      <div>
+        <h3>Book</h3>
+        <ul class="sources footer-book">
+          <li><a href="https://wa.me/917829008264?text=Hi%2C%20I%20would%20like%20to%20plan%20a%20trip%20to%20Netrani%20Island." data-cta="footer">WhatsApp +91 78290 08264</a></li>
+          <li><a href="tel:+917829008264" data-cta="footer">Call +91 78290 08264</a></li>
+          <li><a href="/pricing">Prices and packages</a> · <a href="/boat-timings">Boat timings</a> · <a href="/faq">FAQ</a> · <a href="/contact">Contact</a></li>
+          <li><a href="/blog/">Netrani blog</a> · <a href="/scuba-diving-murudeshwar">Scuba diving</a> · <a href="/netrani-island-snorkeling">Snorkelling</a> · <a href="/private-boat-booking">Private boat</a></li>
+          <li>Stays, taxis and packages in Murudeshwar: <a href="https://murudeshwar.co.in/">murudeshwar.co.in</a></li>
+          <li>Scuba booking for Netrani: <a href="https://www.scubamurudeshwar.in/">scubamurudeshwar.in</a></li>
+        </ul>
+        <h3 class="footer-sources-h">Sources</h3>
+        <ul class="sources" id="sources"></ul>
+      </div>
+      <div>
+        <h3>Credits</h3>
+        <ul class="sources">
+          <li>Coastlines and landmarks © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a>, ODbL.</li>
+          <li><a href="https://threejs.org" rel="noopener">three.js</a> (MIT). Fonts: Fraunces, Instrument Sans, Caveat, JetBrains Mono (SIL OFL).</li>
+          <li>Textures (landscape, Gopura facade, and the neoprene, canvas, gelcoat and teak surfaces), cut-outs (Shiva statue, palms, reef life, fish, sea eagle, turtle, whale shark) and species images are AI-generated illustrations, made from written descriptions, not photographs taken at Netrani or Murudeshwar. People, divers, boats and buildings are modelled in code.</li>
+          <li>Sound is synthesised live in your browser; there are no audio files.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab-call" href="tel:+917829008264" data-cta="floating_call" aria-label="Call the booking desk on +91 78290 08264">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+    <span>Call</span>
+  </a>
+  <div class="dock" id="dock">
+    <a class="dock-btn" id="dock-wa" href="#dive">Plan a dive</a>
+  </div>
+
+</body>
+</html>
